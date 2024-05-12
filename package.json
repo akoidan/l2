@@ -1,0 +1,17 @@
+{
+  "name": "l2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:akoidan/l2.git",
+  "author": "akoidan <deathangel908@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "ts-node ./src/main.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@nut-tree-fork/nut-js": "4.2.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

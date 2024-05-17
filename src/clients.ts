@@ -7,9 +7,11 @@ export class Api {
   private id: string;
   private password: string;
   private myGuid: string;
+  private url: string;
 
-  constructor(private url: string, private name: string) {
+  constructor(url: string, private name: string) {
     this.password = uuidv4();
+    this.url = `http://${url}:9510`
     this.myGuid = `web-${uuidv4()}`;
   }
 
@@ -28,7 +30,7 @@ export class Api {
       headers: allHeaders,
     });
     const data = await res.text();
-    console.log(`${this.name} ${method}:${fulUrl} ${data.replace((/(\\n|\s\s)/g), ' ')}`);
+    console.log(`${this.name} ${method}:${fulUrl} ${data.replace(/[\n\s]+/g, ' ')}`);
     let resData = null;
     try {
       resData = JSON.parse(data);
@@ -46,12 +48,12 @@ export class Api {
     const data = await this.makeRequest(`/client/connect`, 'GET');
     this.id = data.id;
     await this.makeRequest(`/client/request`, 'POST', {
-      'Action': 0,
-      'Request': 0,
-      'Version': 10,
-      'Password': this.password,
-      'Platform': 'web',
-      'Source': this.myGuid
+      "Action": 0,
+      "Request": 0,
+      "Version": 10,
+      "Password": this.password,
+      "Platform": "web",
+      "Source": this.myGuid,
     })
     await this.makeRequest(`/client/request`, 'POST', {
       "Capabilities": {
@@ -61,14 +63,10 @@ export class Api {
         "Fast": false,
         "Loading": true,
         "Encryption2": true
-      }, "Action": 1, "Request": 1, "Source": this.myGuid
-    })
-    await this.makeRequest(`/client/request`,'POST', {
-      "ID": "Unified.Monitor",
-      "Action": 7,
-      "Request": 7,
-      "Run": { "Name": "turn_off" },
-      "Source": this.myGuid
+      },
+      "Action": 1,
+      "Request": 1,
+      "Source": this.myGuid,
     })
   }
 

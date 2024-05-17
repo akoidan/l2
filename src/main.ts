@@ -17,6 +17,7 @@ async function sendKeyToApi(comb: ConfigCombination, config: ConfigData, ids: Re
   for (let i = 0; i < receivers.length; i++) {
     // @ts-ignore
     await ids[`${comb.receiver}-${i}`].sendKey(comb.keySend);
+    await new Promise(resolve => setTimeout(resolve, Math.round(Math.random()*100)));
   }
 }
 

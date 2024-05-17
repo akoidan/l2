@@ -4,9 +4,10 @@ import { InferType } from 'yup';
 
 const urlsSchema = yup.object({
   sags: yup.array().of(yup.string()).required(),
-  bish: yup.string().required()
+  bish: yup.string().required(),
 }).required();
-const keySendSchema = yup.string().oneOf(['F1', 'F2', 'F3']);
+
+const keySendSchema = yup.string();
 const combinationSchema = yup.object({
   receiver: yup.string().oneOf(["sags", "bish"]).required(),
   shortCut: yup.string().required(),

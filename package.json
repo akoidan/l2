@@ -7,11 +7,14 @@
   "license": "MIT",
   "scripts": {
     "test": "ts-node ./src/main.ts",
-    "build": "tsc",
-    "start": "electron src/start.js"
+    "build": "electron-packager . l2 --platform=win32 --arch=x64",
+    "start": "electron index.js"
+  },
+  "devDependencies": {
+    "electron": "^30.0.6",
+    "electron-packager": "^17.1.2"
   },
   "dependencies": {
-    "electron": "^30.0.6",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.4.5",

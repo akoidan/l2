@@ -4,14 +4,15 @@ import { InferType } from 'yup';
 
 const urlsSchema = yup.object({
   sags: yup.array().of(yup.string()).required(),
-  bish: yup.string().required(),
+  bish: yup.array().of(yup.string()).required(),
 }).required();
 
 const keySendSchema = yup.string();
 const combinationSchema = yup.object({
-  receiver: yup.string().oneOf(["sags", "bish"]).required(),
+  receiver: yup.string().required(),
   shortCut: yup.string().required(),
-  keySend: yup.string().required()
+  keySend: yup.string().required(),
+  circular: yup.boolean().required()
 }).required();
 export const rootSchema = yup.object({
   urls: urlsSchema,

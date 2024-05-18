@@ -1,0 +1,62 @@
+{
+  "urls": {
+    "bish": [ "192.168.100.9"],
+    "sags": ["192.168.100.14", "192.168.100.27", "192.168.100.32"]
+  },
+  "combinations": [
+    {
+      "receiver": "sags",
+      "shortCut": "Alt+1",
+      "keySend": "F5",
+      "circular": true
+    },
+    {
+      "receiver": "sags",
+      "shortCut": "Alt+2",
+      "keySend": "F4",
+      "circular": false
+    },
+    {
+      "receiver": "bish",
+      "shortCut": "Alt+3",
+      "keySend": "F3",
+      "circular": false
+    },
+    {
+      "receiver": "sags",
+      "shortCut": "Alt+6",
+      "keySend": "F6",
+      "circular": false
+    },
+    {
+      "receiver": "sags",
+      "shortCut": "Alt+8",
+      "keySend": "F8",
+      "circular": false
+    },
+    {
+      "receiver": "sags",
+      "shortCut": "Alt+9",
+      "keySend": "F9",
+      "circular": false
+    },
+    {
+      "receiver": "bish",
+      "shortCut": "Alt+q",
+      "keySend": "1",
+      "circular": false
+    },
+    {
+      "receiver": "bish",
+      "shortCut": "Alt+w",
+      "keySend": "2",
+      "circular": false
+    },
+    {
+      "receiver": "bish",
+      "shortCut": "Alt+e",
+      "keySend": "3",
+      "circular": false
+    }
+  ]
+}

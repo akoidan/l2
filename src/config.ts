@@ -27,6 +27,7 @@ export class ConfigReader {
     }
     console.log(`Reading config from ${config}`);
     const conf = JSON.parse(await fs.readFile(config, 'utf-8')) as ConfigData;
+    console.log(`Got config ${JSON.stringify(conf, null, 2)}`);
     await rootSchema.validate(conf);
     return conf;
   }

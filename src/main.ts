@@ -5,7 +5,7 @@ import {
 import { ConfigReader } from '@/config';
 import {
   ConfigCombination,
-  ConfigData
+  ConfigData, ConfigUrl, Receiver
 } from '@/types';
 import { Api } from '@/clients';
 
@@ -18,18 +18,28 @@ class ShortCutSender {
 
   async sendKeyToApi(comb: ConfigCombination) {
     console.log(`${comb.shortCut} pressed`);
-    // @ts-ignore TS7053
-    const receivers: string[] = (Array.isArray(this.config.urls[comb.receiver]) ? this.config.urls[comb.receiver] : [this.config.urls[comb.receiver]]) as any as string[];
+
+    const receivers: { dest: string; key: string }[] = [];
+    comb.receivers.forEach(rec => {
+      this.config.urls[rec.destination as keyof ConfigUrl].forEach(dest => {
+        receivers.push({
+          dest,
+          key: rec.keySend
+        })
+      })
+    })
+    // const receivers: string[] = comb.receivers.map(rec => this.config.urls[rec as keyof ConfigUrl]).flatMap(a => a);
     if (comb.circular && receivers.length > 0) {
-      await this.ids[`${comb.receiver}-${this.activeFighterIndex}`].sendKey(comb.keySend);
+      const currRec = receivers[this.activeFighterIndex];
+      await this.ids[currRec.dest].sendKey(currRec.key);
       if (this.activeFighterIndex >= receivers.length - 1) {
-        this.activeFighterIndex = 0; // 3
+        this.activeFighterIndex = 0;
       } else {
         this.activeFighterIndex ++;
       }
     } else {
       for (let i = 0; i < receivers.length; i++) {
-        await this.ids[`${comb.receiver}-${i}`].sendKey(comb.keySend);
+        await this.ids[receivers[i].dest].sendKey(receivers[i].key);
         await new Promise(resolve => setTimeout(resolve, Math.round(Math.random()*500)));
       }
     }
@@ -39,9 +49,8 @@ class ShortCutSender {
     await Promise.all(Object.entries(this.config.urls).map(([key, value]) => {
       const values = Array.isArray(value) ? value : [value];
       values.map((url, index) => {
-        const name = `${key}-${index}`;
-        const api = new Api(url, name);
-        this.ids[`${key}-${index}`] = api;
+        const api = new Api(url, `${key}-${index}`);
+        this.ids[url] = api;
         return api.connect();
       })
     }).flatMap(a => a));

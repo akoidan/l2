@@ -5,57 +5,111 @@
   },
   "combinations": [
     {
-      "receiver": "sags",
+      "receivers": [
+        {
+          "destination": "sags",
+          "keySend": "F5"
+        }
+      ],
       "shortCut": "Alt+1",
-      "keySend": "F5",
       "circular": true
     },
     {
-      "receiver": "sags",
+      "receivers": [
+        {
+          "destination": "sags",
+          "keySend": "F4"
+        }
+      ],
       "shortCut": "Alt+2",
-      "keySend": "F4",
       "circular": false
     },
     {
-      "receiver": "bish",
+      "receivers": [
+        {
+          "destination": "bish",
+          "keySend": "F3"
+        }
+      ],
       "shortCut": "Alt+3",
-      "keySend": "F3",
       "circular": false
     },
     {
-      "receiver": "sags",
+      "receivers": [
+        {
+          "destination": "sags",
+          "keySend": "F6"
+        },
+        {
+          "destination": "bish",
+          "keySend": "F6"
+        }
+      ],
       "shortCut": "Alt+6",
-      "keySend": "F6",
       "circular": false
     },
     {
-      "receiver": "sags",
+      "receivers": [
+        {
+          "destination": "sags",
+          "keySend": "F8"
+        },
+        {
+          "destination": "bish",
+          "keySend": "F8"
+        }
+      ],
       "shortCut": "Alt+8",
-      "keySend": "F8",
       "circular": false
     },
     {
-      "receiver": "sags",
+      "receivers": [
+        {
+          "destination": "sags",
+          "keySend": "F9"
+        }
+      ],
       "shortCut": "Alt+9",
-      "keySend": "F9",
       "circular": false
     },
     {
-      "receiver": "bish",
+      "receivers": [
+        {
+          "destination": "bish",
+          "keySend": "1"
+        }
+      ],
       "shortCut": "Alt+q",
-      "keySend": "1",
       "circular": false
     },
     {
-      "receiver": "bish",
+      "receivers": [
+        {
+          "destination": "bish",
+          "keySend": "2"
+        }
+      ],
       "shortCut": "Alt+w",
-      "keySend": "2",
       "circular": false
     },
     {
-      "receiver": "bish",
+      "receivers": [
+        {
+          "destination": "bish",
+          "keySend": "3"
+        }
+      ],
       "shortCut": "Alt+e",
-      "keySend": "3",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
+          "destination": "bish",
+          "keySend": "F9"
+        }
+      ],
+      "shortCut": "Alt+a",
       "circular": false
     }
   ]

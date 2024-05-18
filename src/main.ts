@@ -19,19 +19,18 @@ class ShortCutSender {
   async sendKeyToApi(comb: ConfigCombination) {
     console.log(`${comb.shortCut} pressed`);
 
-    const receivers: { dest: string; key: string }[] = [];
+    const receivers: Receiver[] = [];
     comb.receivers.forEach(rec => {
       this.config.urls[rec.destination as keyof ConfigUrl].forEach(dest => {
         receivers.push({
-          dest,
-          key: rec.keySend
+          ...rec,
+          destination: dest,
         })
       })
     })
     // const receivers: string[] = comb.receivers.map(rec => this.config.urls[rec as keyof ConfigUrl]).flatMap(a => a);
     if (comb.circular && receivers.length > 0) {
-      const currRec = receivers[this.activeFighterIndex];
-      await this.ids[currRec.dest].sendKey(currRec.key);
+      await this.runCommand(receivers[this.activeFighterIndex]);
       if (this.activeFighterIndex >= receivers.length - 1) {
         this.activeFighterIndex = 0;
       } else {
@@ -39,9 +38,17 @@ class ShortCutSender {
       }
     } else {
       for (let i = 0; i < receivers.length; i++) {
-        await this.ids[receivers[i].dest].sendKey(receivers[i].key);
+        await this.runCommand(receivers[i]);
         await new Promise(resolve => setTimeout(resolve, Math.round(Math.random()*500)));
       }
+    }
+  }
+
+  async runCommand(currRec: Receiver) {
+    if (currRec.keySend) {
+      await this.ids[currRec.destination].sendKey(currRec.keySend);
+    } else {
+      await this.ids[currRec.destination].sendCustomKey(currRec.id, currRec.run);
     }
   }
 

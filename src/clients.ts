@@ -89,20 +89,27 @@ export class Api {
         this.startPolling();
     }
 
-    async sendKey(key: KeySend): Promise<void> {
-        console.log(`Sending key ${key} to ${this.name}`)
+    async sendCustomKey(id: string, run: any): Promise<void> {
+        console.log(`Sending ${id} ${JSON.stringify(run)} to ${this.name}`)
         const res = await this.makeRequest(
             `/client/request`,
             'POST',
             {
-                "ID": "Relmtech.Keyboard",
+                "ID": id,
                 "Action": 7,
                 "Request": 7,
-                "Run": {"Extras": {"Values": [{"Value": key}]}, "Name": "toggle"},
+                "Run": run,
                 "Source": this.myGuid,
             });
-        console.log(`key ${key} is sent to ${this.name}`)
+        console.log(`key ${id} is sent to ${this.name}`);
         return res;
+    }
+
+    async sendKey(key: KeySend): Promise<void> {
+        return  this.sendCustomKey("Relmtech.Keyboard", {
+            "Extras": {"Values": [{"Value": key}]},
+            "Name": "toggle"
+        });
 
     }
 }

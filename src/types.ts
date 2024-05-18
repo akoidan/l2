@@ -8,8 +8,10 @@ const urlsSchema = yup.object({
 }).required();
 
 const receiverSchema = yup.object({
-  destination: yup.string().required(),
-  keySend: yup.string().required(),
+  destination: yup.string().optional(),
+  id: yup.string().optional(),
+  run: yup.object().optional(),
+  keySend: yup.string().optional(),
 }).required();
 const keySendSchema = yup.string();
 const combinationSchema = yup.object({

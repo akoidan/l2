@@ -47,3 +47,16 @@ yarn # install packages
 yarn start
 ```
 
+
+alt+a = heal all
+alt+s = seb9
+alt+d = target
+
+alt+1 = attack
+alt+2 = attack
+alt+3 = use potions
+alt+4 = use potions
+
+
+alt+q = 
+alt+z = get bish

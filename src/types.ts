@@ -3,8 +3,10 @@ import { InferType } from 'yup';
 
 
 const urlsSchema = yup.object({
-  sags: yup.array().of(yup.string()).required(),
-  bish: yup.array().of(yup.string()).required(),
+  sags: yup.array().of(yup.string()).optional(),
+  bish: yup.array().of(yup.string()).optional(),
+  sorc: yup.array().of(yup.string()).optional(),
+  ee: yup.array().of(yup.string()).optional(),
 }).required();
 
 const receiverSchema = yup.object({
@@ -17,7 +19,8 @@ const keySendSchema = yup.string();
 const combinationSchema = yup.object({
   receivers: yup.array().of(receiverSchema),
   shortCut: yup.string().required(),
-  circular: yup.boolean().required()
+  circular: yup.boolean().optional(),
+  noDelay: yup.boolean().optional(),
 }).required();
 
 

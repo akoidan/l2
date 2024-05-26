@@ -1,0 +1,18 @@
+/**
+ This file is used directly by Quasar.
+ It's not imported anywhere in the code.
+ Thus if you don't use Quasar component it's not relevant.
+ */
+@import "helper-fn-and-mixins";
+
+$primary: "var(--q-color-primary)";
+$secondary: "var(--q-color-secondary)";
+$accent: "var(--q-color-accent)";
+$dark: "var(--q-color-dark)";
+$dark-page: "var(--q-color-dark-page)";
+$positive: "var(--q-color-positive)";
+$negative: "var(--q-color-negative)";
+$info: "var(--q-color-info)";
+$warning: "var(--q-color-warning)";
+
+$h1: (size: 45px)

@@ -1,10 +1,10 @@
-import {KeySend} from '@/types';
+import {KeySend} from '@/ts/types/config';
 
 const {v4: uuidv4} = require('uuid');
 
 export class Api {
 
-    private id: string;
+    private id: string|null = null;
     private password: string;
     private myGuid: string;
     private url: string;
@@ -24,7 +24,7 @@ export class Api {
             allHeaders['Ur-Connection-Id'] = this.id;
         }
         console.log(`${this.name} ${method}:${fulUrl}  ${JSON.stringify(body)} ${JSON.stringify(allHeaders)}`);
-        let res: Response = null as Response;
+        let res: Response = null as any as Response;
         try {
             res = await fetch(fulUrl, {
                 method,

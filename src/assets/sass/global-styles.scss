@@ -1,0 +1,32 @@
+/**
+ This file has a global scope.
+ Everything you write here will applied to everything.
+ */
+@import '@quasar/extras/material-icons/material-icons.css';
+@import 'quasar/src/css/index.sass';
+
+@import "@/assets/sass/fonts.scss";
+
+
+body {
+  margin: 0;
+  @include body-small-2;
+  color: var(--q-color-dark);
+}
+
+
+a {
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}

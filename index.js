@@ -1,3 +1,5 @@
 require('ts-node').register();
 require('tsconfig-paths').register();
-require('./src/main');
+const {ElectronStarter} = require('./src/ts/electron');
+
+new ElectronStarter().start();

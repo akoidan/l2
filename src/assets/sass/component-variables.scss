@@ -1,0 +1,12 @@
+/**
+ These styles are globally scoped, which makes that available in every .vue component
+ check build.vite.ts config preprocessorOptions -> additionalData
+ It has same output if you put them directly to .vue <style>
+*/
+@import "@/assets/sass/fonts";
+
+$media-max-width: 900px;
+$media-form-width: 650px;
+$media-form-bigger-width: 1400px;
+
+

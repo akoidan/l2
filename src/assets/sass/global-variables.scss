@@ -1,0 +1,60 @@
+/**
+ This file has a global scope.
+ Everything you write here will applied to everything.
+ */
+
+$q-color-primary   : #1976D2 !default;
+$q-color-secondary : #26A69A !default;
+$q-color-accent    : #9C27B0 !default;
+$q-color-dark-page : #121212 !default;
+$q-color-dark      : #444 !default;
+$q-color-positive  : #21BA45 !default;
+$q-color-negative  : #C10015 !default;
+$q-color-info      : #31CCEC !default;
+$q-color-warning   : #F2C037 !default;
+$color-neutral-ui-100 : #444444;
+$color-neutral-ui-60 : #888888;
+$color-neutral-ui-20 : #DDDDDD;
+$color-neutral-ui-10 : #EEEEEE;
+
+:root {
+  // hardcoded colors
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  // quasar colors
+  --q-color-primary: #{$q-color-primary};
+  --q-color-secondary: #{$q-color-secondary};
+  --q-color-accent: #{$q-color-accent};
+  --q-color-dark: #{$q-color-dark};
+  --q-color-positive: #{$q-color-positive};
+  --q-color-negative: #{$q-color-negative};
+  --q-color-info: #{$q-color-info};
+  --q-color-warning: #{$q-color-warning};
+  --q-color-dark-page: #{$q-color-dark-page};
+
+
+  --color-netural-ui-100: #{$color-neutral-ui-100};
+  --color-netural-ui-60: #{$color-neutral-ui-60};
+  --color-netural-ui-20: #{$color-neutral-ui-20};
+  --color-netural-ui-10: #{$color-neutral-ui-10};
+
+  --Neutral-UI-neutral-ui-100: $q-color-dark;
+
+  --Spacing-spacing-1: 8px;
+  --Spacing-spacing-2: 12px;
+  --Spacing-spacing-3: 16px;
+  --Spacing-spacing-4: 24px;
+  --Spacing-spacing-5: 32px;
+  --Spacing-spacing-6: 40px;
+  --Spacing-spacing-7: 48px;
+  --Spacing-spacing-8: 64px;
+  --Spacing-spacing-9: 80px;
+  --Spacing-spacing-10: 96px;
+  --Spacing-spacing-11: 160px;
+  --Spacing-spacing-12: 188px;
+
+  --border-radius: 12px;
+
+}
+

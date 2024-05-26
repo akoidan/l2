@@ -3,7 +3,7 @@ import { sep } from 'path';
 import {
   ConfigData,
   rootSchema
-} from '@/types';
+} from '@/ts/types/config';
 
 export class ConfigReader {
   constructor() {
@@ -17,7 +17,6 @@ export class ConfigReader {
       return false;
     }
   }
-
 
   async getConfig(): Promise<ConfigData> {
     const config = [process.cwd(), 'config.json'].join(sep);

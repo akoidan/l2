@@ -1,0 +1,84 @@
+@mixin heading-8 {
+  /* Heading/Heading-8 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 48px */
+}
+
+
+@mixin body-small-2 {
+  /* Body/Body-Small-2 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 22.4px */
+}
+
+@mixin body-large-3 {
+  /* Body/Body-Large-3 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 28.8px */
+}
+
+@mixin satoshi-variable {
+  //font-family: "Satoshi Variable";
+  font-family: "Oxanium";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 150%; /* 15px */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+@mixin body-medium-3 {
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+}
+
+
+@mixin body-medium-2 {
+ font-family: "Plus Jakarta Sans";;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 25.6px */
+}
+
+@mixin body-small-3 {
+  /* Body/Body-Small-3 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 22.4px */
+}
+
+
+@mixin satoshi-40 {
+  color: var(--Neutral-UI-neutral-ui-100, #444);
+  //font-family: "Satoshi Variable";
+  font-family: "Oxanium";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 40px */
+}
+
+@mixin heading-9 {
+  /* Heading/Heading-9 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 38.4px */
+}

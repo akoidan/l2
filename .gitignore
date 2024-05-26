@@ -4,3 +4,13 @@ dist
 yarn-error.log
 l2-win32-x64
 config.json
+build/local.json
+.idea
+build/swagger
+yarn-error.log
+node_modules
+dist
+build/stats.html
+playwright/test-report
+playwright/test-results
+playwright/test-screenshots/**/*-darwin.png

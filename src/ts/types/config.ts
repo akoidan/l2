@@ -11,14 +11,14 @@ const urlsSchema = yup.object({
 }).required();
 
 const receiverSchema = yup.object({
-  destination: yup.string().optional(),
+  destination: yup.string().required(),
   id: yup.string().optional(),
   run: yup.object().optional(),
   keySend: yup.string().optional(),
 }).required();
 const keySendSchema = yup.string();
 const combinationSchema = yup.object({
-  receivers: yup.array().of(receiverSchema),
+  receivers: yup.array().of(receiverSchema).required(),
   shortCut: yup.string().required(),
   circular: yup.boolean().optional(),
   noDelay: yup.boolean().optional(),

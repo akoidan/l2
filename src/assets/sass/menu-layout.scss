@@ -1,0 +1,89 @@
+$menu-width: 354px;
+
+@mixin menu-layout {
+  height: 100%;
+  display: grid;
+  @media screen and (min-width: $media-max-width) {
+    grid-template-columns: $menu-width 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "menu header"
+    "menu main";
+
+    > .menu {
+      border-right: 1px solid var(--q-color-primary);
+    }
+    > .header {
+      border-bottom: 1px solid var(--q-color-primary);
+    }
+  }
+
+  @media screen and (max-width: $media-max-width) {
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "menu"
+    "main";
+
+    > .menu, > .header {
+      border-bottom: 1px solid var(--q-color-primary);
+    }
+  }
+
+  > .menu {
+    grid-area: menu;
+    display: flex;
+    padding: var(--Spacing-spacing-6) var(--Spacing-spacing-6) var(--Spacing-spacing-6) var(--Spacing-spacing-5);
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  > .header {
+    grid-area: header;
+    padding: var(--Spacing-spacing-4);
+    display: flex;
+  }
+
+  > .main {
+    grid-area: main;
+    max-width: 100%;
+    overflow: auto;
+    padding: var(--Spacing-spacing-8) var(--Spacing-spacing-9) var(--Spacing-spacing-7) var(--Spacing-spacing-7);
+  }
+}
+
+
+@mixin menu-left {
+  height: 100%;
+  display: flex;
+  @media screen and (min-width: $media-max-width) {
+    flex-direction: row;
+    > .menu {
+      border-right: 1px solid var(--q-color-primary);
+    }
+  }
+
+  @media screen and (max-width: $media-max-width) {
+    flex-direction: row;
+
+    > .menu {
+      border-bottom: 1px solid var(--q-color-primary);
+    }
+  }
+
+  > .menu {
+    display: flex;
+    padding: var(--Spacing-spacing-6) var(--Spacing-spacing-6) var(--Spacing-spacing-6) var(--Spacing-spacing-5);
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  > .main {
+    flex: 1;
+    grid-area: main;
+    padding: var(--Spacing-spacing-8) var(--Spacing-spacing-9) var(--Spacing-spacing-7) var(--Spacing-spacing-7);
+  }
+}

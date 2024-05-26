@@ -1,0 +1,64 @@
+@mixin dashed-between-elements($gap) {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: var(--Spacing-spacing-4);
+
+  *:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Adjust this to align with your design */
+    top: 100%;
+    height: $gap;
+    bottom: 0;
+    border-left: 2px dashed var(--q-color-primary); /* Adjust the color and style as needed */
+  }
+}
+
+@mixin active-entity {
+  &[active] {
+    background-color: var(--q-color-warning);
+  }
+}
+
+@mixin q-page {
+  max-width: $media-form-bigger-width;
+  margin: auto;
+  padding: var(--Spacing-spacing-7);
+}
+
+@mixin q-page-left {
+  max-width: $media-form-bigger-width;
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-spacing-6);
+}
+
+@mixin q-small-page {
+  max-width: $media-form-width;
+  margin: auto;
+  padding: var(--Spacing-spacing-7);
+}
+
+@mixin q-small-middle {
+  max-width: $media-max-width;
+  margin: auto;
+  padding: var(--Spacing-spacing-7);
+}
+
+@mixin focus-visible {
+  &:focus-visible {
+    outline: 2px solid var(--q-accent) !important;
+    outline-offset: 3px;
+  }
+}
+
+@mixin background-lines($color) {
+  background: repeating-linear-gradient(
+                  -45deg,
+                  transparent,
+                  transparent 10px,
+                  $color 10px,
+                  $color 20px
+  );
+}

@@ -6,7 +6,7 @@ import {
 } from '@/types';
 
 export class ConfigReader {
-  constructor(private readonly electronDir: string) {
+  constructor() {
   }
 
   async pathExists(filePath: string): Promise<boolean> {
@@ -20,7 +20,7 @@ export class ConfigReader {
 
 
   async getConfig(): Promise<ConfigData> {
-    const config = [this.electronDir, 'l2.json'].join(sep);
+    const config = [process.cwd(), 'config.json'].join(sep);
     if (!await this.pathExists(config)) {
       console.log(`Config ${JSON.stringify(rootSchema.describe(), null, 2)}`);
       throw Error(`Cannot read from config from '${config}'`)

@@ -72,7 +72,7 @@ class ShortCutSender {
       globalShortcut.unregisterAll()
     });
     try {
-      const configReader = new ConfigReader(app.getPath('userData'));
+      const configReader = new ConfigReader();
       this.config = await configReader.getConfig();
       await this.createApi();
       this.config.combinations.forEach(comb => {

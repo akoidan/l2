@@ -7,6 +7,7 @@ const urlsSchema = yup.object({
   bish: yup.array().of(yup.string()).optional(),
   sorc: yup.array().of(yup.string()).optional(),
   ee: yup.array().of(yup.string()).optional(),
+  tyrs: yup.array().of(yup.string()).optional(),
 }).required();
 
 const receiverSchema = yup.object({

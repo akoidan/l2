@@ -1,13 +1,14 @@
 {
   "urls": {
     "bish": [ "192.168.100.9"],
-    "sags": ["192.168.100.14", "192.168.100.27", "192.168.100.32"]
+    "tyrs": ["192.168.100.14", "192.168.100.27", "192.168.100.32"],
+    "craft": []
   },
   "combinations": [
     {
       "receivers": [
         {
-          "destination": "sags",
+          "destination": "tyrs",
           "keySend": "F5"
         }
       ],
@@ -17,7 +18,7 @@
     {
       "receivers": [
         {
-          "destination": "sags",
+          "destination": "tyrs",
           "keySend": "F4"
         }
       ],
@@ -27,7 +28,7 @@
     {
       "receivers": [
         {
-          "destination": "sags",
+          "destination": "tyrs",
           "keySend": "F3"
         }
       ],
@@ -37,8 +38,8 @@
     {
       "receivers": [
         {
-          "destination": "sags",
-          "keySend": "F7"
+          "destination": "bish",
+          "keySend": "3"
         }
       ],
       "shortCut": "Alt+4",
@@ -47,7 +48,7 @@
     {
       "receivers": [
         {
-          "destination": "sags",
+          "destination": "tyrs",
           "keySend": "F6"
         },
         {
@@ -61,7 +62,7 @@
     {
       "receivers": [
         {
-          "destination": "sags",
+          "destination": "tyrs",
           "keySend": "F8"
         },
         {
@@ -75,7 +76,27 @@
     {
       "receivers": [
         {
-          "destination": "sags",
+          "destination": "tyrs",
+          "keySend": "5"
+        }
+      ],
+      "shortCut": "Alt+5",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
+          "destination": "tyrs",
+          "keySend": "F7"
+        }
+      ],
+      "shortCut": "Alt+7",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
+          "destination": "tyrs",
           "keySend": "F9"
         }
       ],

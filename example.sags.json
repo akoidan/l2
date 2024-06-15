@@ -27,6 +27,16 @@
     {
       "receivers": [
         {
+          "destination": "bish",
+          "keySend": "4"
+        }
+      ],
+      "shortCut": "Alt+4",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
           "destination": "sags",
           "keySend": "F6"
         },

@@ -147,10 +147,41 @@
       "receivers": [
         {
           "destination": "bish",
-          "keySend": "F6"
+          "keySend": "F5"
         }
       ],
       "shortCut": "Alt+z",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
+          "destination": "tyrs",
+          "keySend": "7"
+        }
+      ],
+      "shortCut": "Alt+q",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
+          "destination": "tyrs",
+          "id": "l2.ctrl_f2",
+          "run":  {"Name": "ctrl_f2"}
+        }
+      ],
+      "shortCut": "Alt+2",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
+          "destination": "tyrs",
+          "keySend": "6"
+        }
+      ],
+      "shortCut": "Alt+e",
       "circular": false
     }
   ]

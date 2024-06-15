@@ -39,7 +39,7 @@ class ShortCutSender {
     } else {
       for (let i = 0; i < receivers.length; i++) {
         await this.runCommand(receivers[i]);
-        await new Promise(resolve => setTimeout(resolve, Math.round(Math.random()*500)));
+        await new Promise(resolve => setTimeout(resolve, Math.round(Math.random()*100)));
       }
     }
   }

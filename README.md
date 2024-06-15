@@ -49,14 +49,19 @@ yarn start
 
 
 alt+a = heal all
-alt+s = seb9
-alt+d = target
+alt+s = self heal
+alt+d = heal
 
-alt+1 = attack
+alt+1 = stun
 alt+2 = attack
 alt+3 = use potions
-alt+4 = use potions
+alt+4 = stigma
 
+alt+5 active passive tyr
+alt+6 = run to me
+alt+7 = great heal
+alt+8 = to bd 
+alt+9 = puma tyr
 
 alt+q = 
 alt+z = get bish

@@ -77,7 +77,7 @@
       "receivers": [
         {
           "destination": "tyrs",
-          "keySend": "5"
+          "keySend": "1"
         }
       ],
       "shortCut": "Alt+5",
@@ -178,10 +178,54 @@
       "receivers": [
         {
           "destination": "tyrs",
-          "keySend": "6"
+          "keySend": "2"
         }
       ],
       "shortCut": "Alt+e",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
+          "destination": "tyrs",
+          "keySend": "3"
+        },
+        {
+          "destination": "tyrs",
+          "keySend": "F10"
+        },
+        {
+          "destination": "bish",
+          "keySend": "8"
+        },
+        {
+          "destination": "bish",
+          "keySend": "F10"
+        }
+      ],
+      "shortCut": "Alt+g",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
+          "destination": "tyrs",
+          "keySend": "8"
+        },
+        {
+          "destination": "bish",
+          "keySend": "8"
+        },
+        {
+          "destination": "tyrs",
+          "keySend": "9"
+        },
+        {
+          "destination": "bish",
+          "keySend": "9"
+        }
+      ],
+      "shortCut": "Alt+,",
       "circular": false
     }
   ]

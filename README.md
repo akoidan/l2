@@ -63,5 +63,10 @@ alt+7 = great heal
 alt+8 = to bd 
 alt+9 = puma tyr
 
-alt+q = 
+alt+q = lower hp all tyrs
+alt+w = tyr damage current taget 
+alt+e = activate zaelot
 alt+z = get bish
+
+alt+g enable form + costochka
+.pa_time

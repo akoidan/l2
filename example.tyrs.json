@@ -1,8 +1,8 @@
 {
   "urls": {
-    "bish": [ "192.168.100.9"],
+    "se": [ "192.168.100.9"],
     "tyrs": ["192.168.100.14", "192.168.100.27", "192.168.100.33"],
-    "craft": []
+    "craft": ["192.168.100.36"]
   },
   "combinations": [
     {
@@ -20,6 +20,10 @@
         {
           "destination": "tyrs",
           "keySend": "F4"
+        },
+        {
+          "destination": "craft",
+          "keySend": "F4"
         }
       ],
       "shortCut": "Alt+2",
@@ -30,6 +34,10 @@
         {
           "destination": "tyrs",
           "keySend": "F3"
+        },
+        {
+          "destination": "craft",
+          "keySend": "F3"
         }
       ],
       "shortCut": "Alt+3",
@@ -38,7 +46,7 @@
     {
       "receivers": [
         {
-          "destination": "bish",
+          "destination": "se",
           "keySend": "3"
         }
       ],
@@ -52,7 +60,11 @@
           "keySend": "F6"
         },
         {
-          "destination": "bish",
+          "destination": "se",
+          "keySend": "F6"
+        },
+        {
+          "destination": "craft",
           "keySend": "F6"
         }
       ],
@@ -66,7 +78,11 @@
           "keySend": "F8"
         },
         {
-          "destination": "bish",
+          "destination": "se",
+          "keySend": "F8"
+        },
+        {
+          "destination": "craft",
           "keySend": "F8"
         }
       ],
@@ -88,6 +104,10 @@
         {
           "destination": "tyrs",
           "keySend": "F7"
+        },
+        {
+          "destination": "craft",
+          "keySend": "F7"
         }
       ],
       "shortCut": "Alt+7",
@@ -98,6 +118,10 @@
         {
           "destination": "tyrs",
           "keySend": "F9"
+        },
+        {
+          "destination": "craft",
+          "keySend": "F9"
         }
       ],
       "shortCut": "Alt+9",
@@ -106,7 +130,7 @@
     {
       "receivers": [
         {
-          "destination": "bish",
+          "destination": "se",
           "keySend": "1"
         }
       ],
@@ -116,7 +140,7 @@
     {
       "receivers": [
         {
-          "destination": "bish",
+          "destination": "se",
           "keySend": "2"
         }
       ],
@@ -126,7 +150,7 @@
     {
       "receivers": [
         {
-          "destination": "bish",
+          "destination": "se",
           "keySend": "F9"
         }
       ],
@@ -136,7 +160,7 @@
     {
       "receivers": [
         {
-          "destination": "bish",
+          "destination": "se",
           "keySend": "F9"
         }
       ],
@@ -146,7 +170,7 @@
     {
       "receivers": [
         {
-          "destination": "bish",
+          "destination": "se",
           "keySend": "F5"
         }
       ],
@@ -195,11 +219,11 @@
           "keySend": "F10"
         },
         {
-          "destination": "bish",
+          "destination": "se",
           "keySend": "8"
         },
         {
-          "destination": "bish",
+          "destination": "se",
           "keySend": "F10"
         }
       ],
@@ -213,7 +237,7 @@
           "keySend": "8"
         },
         {
-          "destination": "bish",
+          "destination": "se",
           "keySend": "8"
         },
         {
@@ -221,7 +245,11 @@
           "keySend": "9"
         },
         {
-          "destination": "bish",
+          "destination": "se",
+          "keySend": "9"
+        },
+        {
+          "destination": "se",
           "keySend": "9"
         }
       ],

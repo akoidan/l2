@@ -1,7 +1,8 @@
 {
   "urls": {
     "bish": [ "192.168.100.9"],
-    "sags": ["192.168.100.14", "192.168.100.27", "192.168.100.33"]
+    "sags": ["192.168.100.14", "192.168.100.27", "192.168.100.33"],
+    "wc": ["192.168.100.36"]
   },
   "combinations": [
     {
@@ -11,6 +12,7 @@
           "keySend": "F5"
         }
       ],
+      "name": "stun",
       "shortCut": "Alt+1",
       "circular": true
     },
@@ -21,6 +23,7 @@
           "keySend": "F4"
         }
       ],
+      "name": "attack",
       "shortCut": "Alt+2",
       "circular": false
     },
@@ -31,7 +34,30 @@
           "keySend": "4"
         }
       ],
-      "shortCut": "Alt+4",
+      "name": "paralych",
+      "shortCut": "Alt+3",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
+          "destination": "wc",
+          "keySend": "2"
+        }
+      ],
+      "name": "WC Sleep",
+      "shortCut": "alt+4",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
+          "destination": "wc",
+          "keySend": "1"
+        }
+      ],
+      "name": "WC Fear",
+      "shortCut": "Alt+5",
       "circular": false
     },
     {
@@ -45,6 +71,7 @@
           "keySend": "F6"
         }
       ],
+      "name": "come to me",
       "shortCut": "Alt+6",
       "circular": false
     },
@@ -55,6 +82,7 @@
           "keySend": "F8"
         }
       ],
+      "name": null,
       "shortCut": "Alt+8",
       "circular": false
     },
@@ -69,6 +97,7 @@
           "keySend": "f10"
         }
       ],
+      "name": "archers buff",
       "shortCut": "Alt+9",
       "circular": false
     },
@@ -79,6 +108,7 @@
           "keySend": "F3"
         }
       ],
+      "name": "battle heal",
       "shortCut": "Alt+q",
       "circular": false
     },
@@ -89,6 +119,7 @@
           "keySend": "F4"
         }
       ],
+      "name": "greater heal",
       "shortCut": "Alt+w",
       "circular": false
     },
@@ -99,6 +130,7 @@
           "keySend": "F5"
         }
       ],
+      "name": "restore life",
       "shortCut": "Alt+e",
       "circular": false
     },
@@ -109,6 +141,7 @@
           "keySend": "F9"
         }
       ],
+      "name": "Heal all",
       "shortCut": "Alt+a",
       "circular": false
     },
@@ -129,7 +162,8 @@
           "run":  {"Name": "alt_tab"}
         }
       ],
-      "shortCut": "Alt+3",
+      "name": "Not used",
+      "shortCut": "alt+'",
       "circular": false
     },
     {
@@ -139,17 +173,8 @@
           "keySend": "2"
         }
       ],
+      "name": "destination",
       "shortCut": "Alt+d",
-      "circular": false
-    },
-    {
-      "receivers": [
-        {
-          "destination": "bish",
-          "keySend": "F6"
-        }
-      ],
-      "shortCut": "Alt+z",
       "circular": false
     },
     {
@@ -159,7 +184,19 @@
           "keySend": "1"
         }
       ],
+      "name": "Target me",
       "shortCut": "Alt+s",
+      "circular": false
+    },
+    {
+      "receivers": [
+        {
+          "destination": "bish",
+          "keySend": "F6"
+        }
+      ],
+      "name": "bish to me",
+      "shortCut": "Alt+z",
       "circular": false
     }
   ]

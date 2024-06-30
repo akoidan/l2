@@ -19,6 +19,7 @@ const receiverSchema = yup.object({
 const keySendSchema = yup.string();
 const combinationSchema = yup.object({
   receivers: yup.array().of(receiverSchema),
+  name: yup.string().required(),
   shortCut: yup.string().required(),
   circular: yup.boolean().optional(),
   noDelay: yup.boolean().optional(),

@@ -44,7 +44,7 @@ export function getConfig(consts: { IS_DEBUG?: boolean, PUBLIC_PATH?: string, PO
       }),
       createHtmlPlugin({
         minify: !consts.IS_DEBUG,
-        entry: '/ts/vue.ts',
+        entry: '/ts/main.ts',
         template: 'assets/index.html',
         ...(consts.VUE_DEVTOOL && {
           inject: {
@@ -82,9 +82,6 @@ export function getConfig(consts: { IS_DEBUG?: boolean, PUBLIC_PATH?: string, PO
         }
       },
       rollupOptions: {
-        input: {
-          index: resolve(srcDir, 'index.html'), //index should be inside src, otherwise vite won't return it by default
-        },
         output: {
           manualChunks(id,) {
             // this configuration provides output

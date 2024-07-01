@@ -12,6 +12,11 @@
     "start-vue": "EDITOR=webstorm vite --force",
     "build-vue": "vite build"
   },
+  "engines": {
+    "node": ">=20.0.0 <22",
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.17.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.4",
     "@babel/types": "^7.24.0",
@@ -40,6 +45,7 @@
     "sass": "1.75.0",
     "servor": "^4.0.2",
     "typescript": "^5.4.5",
+    "electron-vite": "^2.2.0",
     "vite": "^5.2.10",
     "vite-plugin-checker": "^0.6.4",
     "vite-plugin-compression": "^0.5.1",
@@ -49,8 +55,6 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.16.11",
-    "@zitadel/vue": "^1.0.3",
-    "electron-vite": "^2.2.0",
     "lines-logger": "^2.1.2",
     "pinia": "^2.1.7",
     "quasar": "^2.15.4",
